@@ -1,5 +1,5 @@
 from django.urls import re_path
-from django_forum_app import views
+from . import views
 
 urlpatterns = [
     re_path(r'^$', views.index, name='forum-index'),

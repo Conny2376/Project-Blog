@@ -5,8 +5,8 @@ try:
 except:
     from django.urls import reverse
 from django.template.context_processors import csrf
-from django_forum_app.models import Category, Forum, Topic, Post
-from django_forum_app.forms import TopicForm, PostForm
+from .models import Category, Forum, Topic, Post
+from .forms import TopicForm, PostForm
 from django.contrib.auth.decorators import login_required
 
 

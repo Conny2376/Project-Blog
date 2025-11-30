@@ -1,6 +1,6 @@
 from django.contrib import admin
-from django_forum_app.models import Category, Forum, Topic, Post, ProfaneWord
-from django_forum_app.forms import PostAdminForm
+from my_blog.models import Category, Forum, Topic, Post, ProfaneWord
+from .forms import PostAdminForm
 
 
 class CategoryAdmin(admin.ModelAdmin):

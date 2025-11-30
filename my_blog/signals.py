@@ -13,7 +13,7 @@ def send_post_email(sender, instance, **kwargs):
         t = loader.get_template('post_email.txt')
         c = Context({ 'domain': Site.objects.get_current().domain, 'url': instance.get_absolute_url(), 'forums': instance.topic.forums.all()})
         message = t.render(c)
-        from django_forum_app.models import Post
+        from .models import Post
         creators = Post.objects.filter(topic=instance.topic).values('creator__email').annotate(n=Count("creator__id"))
         for creator in creators:
             if not instance.creator.email == creator['creator__email']:
